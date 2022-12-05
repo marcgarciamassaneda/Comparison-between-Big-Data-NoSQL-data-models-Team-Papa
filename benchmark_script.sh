@@ -17,6 +17,7 @@ tar xfvz ycsb-0.17.0.tar.gz
 cd ycsb-0.17.0
 mkdir database
 cd database
+mv ~/Comparison-between-Big-Data-NoSQL-data-models-Team-Papa/docker-compose-redis.yml .
 sudo apt install python2 -y
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 docker-compose -f docker-compose-redis.yml up
