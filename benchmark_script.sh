@@ -20,6 +20,7 @@ mv ~/Comparison-between-Big-Data-NoSQL-data-models-Team-Papa/docker-compose-redi
 sudo apt install python2 -y
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 sudo docker-compose -f docker-compose-redis.yml up &
+sleep 10
 cd ..
 mkdir results_redis
 ./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_1a.txt
