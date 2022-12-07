@@ -23,37 +23,48 @@ sudo docker-compose -f docker-compose-redis.yml up &
 sleep 20
 cd ..
 mkdir results_redis
-./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_1a.txt
-./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_1a.txt
-./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_2a.txt
-./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_2a.txt
-./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_3a.txt
-./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_3a.txt
+./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_a1.txt
+./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_a1.txt
+./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_a2.txt
+./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_a2.txt
+./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_a3.txt
+./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_a3.txt
 
-./bin/ycsb load redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_1b.txt
-./bin/ycsb run redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_1b.txt
-./bin/ycsb load redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_2b.txt
-./bin/ycsb run redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_2b.txt
-./bin/ycsb load redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_3b.txt
-./bin/ycsb run redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_3b.txt
+./bin/ycsb load redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_b1.txt
+./bin/ycsb run redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_b1.txt
+./bin/ycsb load redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_b2.txt
+./bin/ycsb run redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_b2.txt
+./bin/ycsb load redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_b3.txt
+./bin/ycsb run redis -s -P workloads/workloadb -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_b3.txt
 
-./bin/ycsb load redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_1c.txt
-./bin/ycsb run redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_1c.txt
-./bin/ycsb load redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_2c.txt
-./bin/ycsb run redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_2c.txt
-./bin/ycsb load redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_3c.txt
-./bin/ycsb run redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_3c.txt
+./bin/ycsb load redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_c1.txt
+./bin/ycsb run redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_c1.txt
+./bin/ycsb load redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_c2.txt
+./bin/ycsb run redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_c2.txt
+./bin/ycsb load redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_c3.txt
+./bin/ycsb run redis -s -P workloads/workloadc -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_c3.txt
 
-./bin/ycsb load redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_1d.txt
-./bin/ycsb run redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_1d.txt
-./bin/ycsb load redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_2d.txt
-./bin/ycsb run redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_2d.txt
-./bin/ycsb load redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_3d.txt
-./bin/ycsb run redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_3d.txt
+./bin/ycsb load redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_d1.txt
+./bin/ycsb run redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_d1.txt
+./bin/ycsb load redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_d2.txt
+./bin/ycsb run redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_d2.txt
+./bin/ycsb load redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_d3.txt
+./bin/ycsb run redis -s -P workloads/workloadd -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_d3.txt
 
-./bin/ycsb load redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_1e.txt
-./bin/ycsb run redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_1e.txt
-./bin/ycsb load redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_2e.txt
-./bin/ycsb run redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_2e.txt
-./bin/ycsb load redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_3e.txt
-./bin/ycsb run redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_3e.txt
+./bin/ycsb load redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_e1.txt
+./bin/ycsb run redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_e1.txt
+./bin/ycsb load redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_e2.txt
+./bin/ycsb run redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_e2.txt
+./bin/ycsb load redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_e3.txt
+./bin/ycsb run redis -s -P workloads/workloade -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_e3.txt
+
+./bin/ycsb load redis -s -P workloads/workloadf -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_f1.txt
+./bin/ycsb run redis -s -P workloads/workloadf -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_f1.txt
+./bin/ycsb load redis -s -P workloads/workloadf -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_f2.txt
+./bin/ycsb run redis -s -P workloads/workloadf -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_f2.txt
+./bin/ycsb load redis -s -P workloads/workloadf -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputLoad_f3.txt
+./bin/ycsb run redis -s -P workloads/workloadf -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > results_redis/outputRun_f3.txt
+
+cd database
+sleep 1
+sudo docker-compose -f docker-compose-redis.yml down
