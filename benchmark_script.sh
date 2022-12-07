@@ -21,5 +21,5 @@ sudo apt install python2 -y
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 docker-compose -f docker-compose-redis.yml up
 cd ..
-./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I)" -p "redis.port=6379" -p "redis.cluster=true" > outputLoad_1a.txt
-./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I)" -p "redis.port=6379" -p "redis.cluster=true" > outputRun_1a.txt
+./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > outputLoad_1a.txt
+./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I | cut -d ' ' -f 1)" -p "redis.port=6379" -p "redis.cluster=true" > outputRun_1a.txt
