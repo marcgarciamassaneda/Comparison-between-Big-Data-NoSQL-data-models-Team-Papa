@@ -9,8 +9,6 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" -y
 apt-cache policy docker-ce
 sudo apt install docker-ce -y
-#sudo usermod -aG docker ${USER}
-#su - ${USER}
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 curl -O --location https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycsb-0.17.0.tar.gz
@@ -23,5 +21,5 @@ sudo apt install python2 -y
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 docker-compose -f docker-compose-redis.yml up
 cd ..
-./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=127.0.0.1" -p "redis.port=6379" -p "redis.cluster=true" > outputLoad.txt
-./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=127.0.0.1" -p "redis.port=6379" -p "redis.cluster=true" > outputRun.txt
+./bin/ycsb load redis -s -P workloads/workloada -p "redis.host=$(hostname -I)" -p "redis.port=6379" -p "redis.cluster=true" > outputLoad_1a.txt
+./bin/ycsb run redis -s -P workloads/workloada -p "redis.host=$(hostname -I)" -p "redis.port=6379" -p "redis.cluster=true" > outputRun_1a.txt
