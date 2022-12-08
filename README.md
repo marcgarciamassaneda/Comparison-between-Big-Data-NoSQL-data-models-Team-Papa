@@ -9,4 +9,4 @@ chmod +x ./script.sh
 ./script.sh
 ```
 
-Then the script should install all the dependencies and run the benchmarks. The results of the benchmarks should be accesible in the folders results_redis, results_mongo and results_cassandra.
+Then the script should install all the dependencies and run the benchmarks. The results of the benchmarks should be accessible in the folders results_redis, results_mongo and results_cassandra.
