@@ -1,0 +1,128 @@
+version: '3'
+services:
+  cassandra:
+    image: docker.io/bitnami/cassandra:3-debian-10
+    ports:
+      - 7000:7000
+      - 9042:9042
+    expose:
+      - 7000
+      - 7001
+      - 7199
+      - 9042
+      - 9142
+    volumes:
+      - ./cassandra:/bitnami
+    environment:
+      - CASSANDRA_SEEDS=cassandra,cassandra2,cassandra3,cassandra4,cassandra5,cassandra6
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_PASSWORD_SEEDER=yes
+      - CASSANDRA_PASSWORD=cassandra
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=200M
+  cassandra2:
+    image: docker.io/bitnami/cassandra:3-debian-10
+    ports:
+      - 7001:7000
+      - 9043:9042
+    expose:
+      - 7000
+      - 7001
+      - 7199
+      - 9042
+      - 9142
+    volumes:
+      - ./cassandra2:/bitnami
+    environment:
+      - CASSANDRA_SEEDS=cassandra,cassandra2,cassandra3,cassandra4,cassandra5,cassandra6
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_PASSWORD=cassandra
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=200M
+  cassandra3:
+    image: docker.io/bitnami/cassandra:3-debian-10
+    ports:
+      - 7002:7000
+      - 9044:9042
+    expose:
+      - 7000
+      - 7001
+      - 7199
+      - 9042
+      - 9142
+    volumes:
+      - ./cassandra3:/bitnami
+    environment:
+      - CASSANDRA_SEEDS=cassandra,cassandra2,cassandra3,cassandra4,cassandra5,cassandra6
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_PASSWORD=cassandra
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=200M
+  cassandra4:
+    image: docker.io/bitnami/cassandra:3-debian-10
+    ports:
+      - 7003:7000
+      - 9045:9042
+    expose:
+      - 7000
+      - 7001
+      - 7199
+      - 9042
+      - 9142
+    volumes:
+      - ./cassandra4:/bitnami
+    environment:
+      - CASSANDRA_SEEDS=cassandra,cassandra2,cassandra3,cassandra4,cassandra5,cassandra6
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_PASSWORD=cassandra
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=200M
+  cassandra5:
+    image: docker.io/bitnami/cassandra:3-debian-10
+    ports:
+      - 7004:7000
+      - 9046:9042
+    expose:
+      - 7000
+      - 7001
+      - 7199
+      - 9042
+      - 9142
+    volumes:
+      - ./cassandra5:/bitnami
+    environment:
+      - CASSANDRA_SEEDS=cassandra,cassandra2,cassandra3,cassandra4,cassandra5,cassandra6
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_PASSWORD=cassandra
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=200M
+  cassandra6:
+    image: docker.io/bitnami/cassandra:3-debian-10
+    ports:
+      - 7005:7000
+      - 9047:9042
+    expose:
+      - 7000
+      - 7001
+      - 7199
+      - 9042
+      - 9142
+    volumes:
+      - ./cassandra6:/bitnami
+    environment:
+      - CASSANDRA_SEEDS=cassandra,cassandra2,cassandra3,cassandra4,cassandra5,cassandra6
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_PASSWORD=cassandra
+      - MAX_HEAP_SIZE=2G
+      - HEAP_NEWSIZE=200M
+
+
+
+
+
+# sudo chmod 775 -R cassandra*
+# docker exec -ti -u root database_cassandra_1 bash
+#
+# docker exec -it cass_cassandra_1 cqlsh -u cassandra -p cassandra -e "create keyspace ycsb WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor':3}"
+#
+#
